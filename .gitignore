@@ -1,3 +1,7 @@
 credentials
 __pycache__
 openweathermap_apikey
+mastodon_credentials 
+mastodon_credential.secret 
+undertheweather_mastodon.secret
+old_mastodon.py
