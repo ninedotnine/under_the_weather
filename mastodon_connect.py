@@ -1,28 +1,11 @@
+from pprint import pprint
+from time import sleep
+
 from mastodon import Mastodon, StreamListener
 from get_creds import get_creds
-from openweathermap import try_city
-from pprint import pprint
-
-
-########################################
-# old code! used only for initial setup. kept for posterity.
-# Mastodon.create_app(
-#      'undertheweather',
-#      api_base_url = 'https://mastodon.social',
-#      to_file = 'undertheweather_mastodon.secret'
-# )
-#
-# mastodon = Mastodon(
-#     client_id = 'undertheweather_mastodon.secret',
-#     api_base_url = 'https://mastodon.social'
-# )
-#
-# mastodon.log_in(
-#     'userhuteoans@endrix.org',
-#     '45iS2f0qeP78LJemZ57bTzZjI',
-#     to_file = 'mastodon_credential.secret'
-# )
-########################################
+from openweathermap import try_city, get_winnipeg
+from watson_api import get_strongest_emotion
+from redditaww import get_cute_thing
 
 cities = {} # mega-list of all the most popular cities
 with open("world_largest_cities.txt") as fd:
@@ -36,55 +19,91 @@ mastodon = Mastodon(
     api_base_url = 'https://mastodon.social'
 )
 
-
 class StreamListenerWeather(StreamListener):
     def on_update(self, status):
-        pprint("-----------STATUS------------------")
-        print(status)
+        print("-----------received status.------------------")
+        print("i don't really care about these.")
+        if status.get("account").get("acct") == "UnderTheWeather":
+            print("this is just feedback!")
+#         pprint(status)
 
     def on_notification(self, notification):
         print("-----------NOTIFICATION------------------")
-        pprint(notification)
+#         pprint(notification)
         if notification.get('type') != 'mention':
-            print("type wasn't mention.")
+            print("type wasn't mentioned.")
             return
         status = notification.get('status')
+#         pprint(status)
         if status == None:
             print("status was none.")
             return
+        print((status.get('content')))
         content = cleanup(status.get('content'))
         if content == None:
             print("content was none.")
             return
-        for word in content:
-            print("=============== WORDS:",  word)
-        acct = status.get('account').get('acct')
+        if content == "":
+            mastodon.status_post(f"what do you want?", in_reply_to_id=status)
+            return
+        acct = notification.get('account').get('acct')
+        emotion = get_strongest_emotion(content)
+        print("THE POSTER IS FEELING: " + emotion)
+        if emotion == "joy":
+            if status.get('visibility') != 'direct':
+                mastodon.status_reblog(status)
+            else:
+                print("can't reblog a direct message.")
+        elif emotion == "disgust":
+            mastodon.status_post("you could try being less rude.",
+                                 in_reply_to_id=status)
+            return
+        elif emotion == "anger":
+            mastodon.status_post(get_winnipeg(), in_reply_to_id=status)
+            return
+        elif emotion == "emoji":
+            mastodon.status_post("Current weather in your house: \U0001f4a9",
+                                 in_reply_to_id=status)
+            return
         for city in cities:
-            if city in (' '.join(content)):
+            if city in content:
                 print("TRYING: " + city)
-                weather = try_city(f"{city},{cities[city]}")
+                report = try_city(f"{city},{cities[city]}")
                 break
         else:
-            for word in content:
+            for word in sorted(content.split(), key=len, reverse=True):
+                # here it tries to guess which of the other words might be a
+                # city by trying them in order of length until it gets a
+                # hit. is this even a good idea at all?
+                sleep(0.5)
                 print("GUESSING: " + word)
-                weather = try_city(word)
-        if weather != None:
-            print("SAYING==========", acct, ", weather: ", weather)
-            mastodon.status_post(f"@{acct} {weather}",
-                                 in_reply_to_id=notification)
+                report = try_city(word)
+                if report != None:
+                    break
+        if report != None:
+            print(report)
+            mastodon.status_post(f"@{acct} {report}", in_reply_to_id=status)
+            if emotion == "sadness":
+                sleep(1)
+                cute_url = get_cute_thing()
+                mastodon.status_post("aw, don't be sad, @" + acct +
+                                     ".\nmaybe this will cheer you up!\n" +
+                                     cute_url, in_reply_to_id=status)
             return
-        print(f"@{acct} SAYING========== error 404")
-        mastodon.status_post("sorry @{acct}, i failed to find your city :^(",
-                             in_reply_to_id = notification)
+        print("error 404") # report was None
+        mastodon.status_post(f"sorry @{acct}, i didn't find your city :^(",
+                             in_reply_to_id = status)
 
 def cleanup(content):
     if content == None:
         return None
-    content = content.rstrip("</p>").split()
-    print("----- content is: ", content)
-    content = [word.lower() for word in content if
-        set(word).isdisjoint(set("@><()[]{}\""))]
-    print("----- content is: ", content)
+#     print("----- 1 content is: ", content)
+    content = content.replace("<p>", "").replace("</p>", "")
+    content = content.replace("&apos;", "'").split()
+#     print("----- 2 content is: ", content)
+    content = (' '.join([word.lower() for word in content if
+        set(word).isdisjoint(set("@<>\""))]))
+    print("----- cleaned content is: ", content)
     return content
 
 def main():

@@ -8,8 +8,9 @@ from time import strftime, localtime, time
 
 from pprint import pprint
 
-apikey_filename = "openweathermap_apikey"
 default_city = 'montreal'
+
+apikey_filename = "openweathermap_apikey"
 
 def load_apikey(filename):
     try:
@@ -20,7 +21,9 @@ def load_apikey(filename):
         exit(2)
     return apikey
 
-def build_url(city_name, apikey):
+apikey = load_apikey(apikey_filename)
+
+def build_url(city_name):
     baseurl = 'http://api.openweathermap.org/data/2.5/weather?q='
     return baseurl + str(city_name) + '&mode=json&units=metric&APPID=' + apikey
 
@@ -41,23 +44,25 @@ def sort_data(json_data):
     return (city, country, weather, temp)
 
 def try_city(city_name):
-    apikey = load_apikey(apikey_filename)
-    url = build_url(city_name.strip(), apikey)
+    city_name = city_name.strip().rstrip("!?").replace("&apos;", "'")
+    url = build_url(city_name.strip())
     try:
         json_data = fetch_data(url)
     except urllib.request.HTTPError:
         return None
     (city, country, weather, temp) = sort_data(json_data)
-    print( f"current weather in {city}, {country}:\n{weather}, {temp} \xb0C")
-    return f"current weather in {city}, {country}:\n{weather}, {temp} \xb0C"
+    return f"\nCurrent weather in {city}, {country}:\n{weather}, {temp} \xb0C"
+
+def get_winnipeg():
+    (win, can, weather, temp) = sort_data(fetch_data(build_url("winnipeg")))
+    return f"it's {temp} \xb0C and {weather} in Winnipeg right now."
 
 def main():
     if len(argv) > 1:
         city = argv[1]
     else:
         city = default_city
-    apikey = load_apikey(apikey_filename)
-    url = build_url(city, apikey)
+    url = build_url(city)
     json_data = fetch_data(url)
 #     pprint(json_data)
     (city, country, weather, temp) = sort_data(json_data)
