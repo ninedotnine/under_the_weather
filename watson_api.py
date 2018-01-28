@@ -1,10 +1,14 @@
+#!/usr/bin/python3
+
 import urllib.request
 import json
 import pprint
+from sys import argv
 
 from get_creds import get_creds
 
-text = "It is cold and rainy, what a great day we're having..."
+default_text = "It is cold and rainy, what a great day we're having..."
+default_text = "I still have a dream, a dream deeply rooted in the American dream %E2%80%93 one day this nation will rise up and live up to its creed. We hold these truths to be self evident, that all men are created equal."
 
 def builder(text):
     baseurl = "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27&text=" + text + "&features=sentiment,keywords"
@@ -24,6 +28,10 @@ def fetcher(full_api_url, username, password):
     return json.loads(output)
 
 def main():
+    if len(argv) > 1:
+        text = argv[1]
+    else:
+        text = default_text
     (username, password) = get_creds("credentials")
     full_url = builder(text)
     json_data = fetcher(full_url, username, password)
