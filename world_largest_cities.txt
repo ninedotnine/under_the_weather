@@ -1,0 +1,997 @@
+tokyo,japan
+jakarta,indonesia
+new york,united states
+seoul,south korea
+manila,philippines
+mumbai,india
+sao paulo,brazil
+mexico city,mexico
+delhi,india
+osaka,japan
+cairo,egypt
+kolkata,india
+los angeles,united states
+shanghai,china
+moscow,russia
+beijing,china
+buenos aires,argentina
+guangzhou,china
+shenzhen,china
+istanbul,turkey
+rio de janeiro,brazil
+paris,france
+karachi,pakistan
+nagoya,japan
+chicago,united states
+lagos,nigeria
+london,united kingdom
+bangkok,thailand
+kinshasa,dem rep of congo
+tehran,iran
+lima,peru
+dongguan,china
+bogota,colombia
+chennai,india
+dhaka,bangladesh
+essen,germany
+tianjin,china
+hong kong,hong kong
+taipei,taiwan
+lahore,pakistan
+ho chi minh city,viet nam
+bangalore,india
+hyderabad,india
+johannesburg,south africa
+baghdad,iraq
+toronto,canada
+santiago,chile
+kuala lumpur,malaysia
+san francisco,united states
+philadelphia,united states
+wuhan,china
+miami,united states
+dallas,united states
+madrid,spain
+ahmedabad,india
+boston,united states
+belo horizonte,brazil
+khartoum,sudan
+saint petersburg,russia
+shenyang,china
+houston,united states
+pune,india
+riyadh,saudi arabia
+singapore,singapore
+washington,united states
+yangon,myanmar
+milan,italy
+atlanta,united states
+chongqing,china
+alexandria,egypt
+nanjing,china
+guadalajara,mexico
+barcelona,spain
+chengdu,china
+detroit,united states
+ankara,turkey
+abidjan,côte d'ivoire
+athens,greece
+berlin,germany
+sydney,australia
+monterrey,mexico
+phoenix,united states
+busan,south korea
+recife,brazil
+bandung,indonesia
+porto alegre,brazil
+melbourne,australia
+luanda,angola
+hangzhou,china
+algiers,algeria
+hà noi,viet nam
+montreal,canada
+xi'an,china
+pyongyang,north korea
+qingdao,china
+surat,india
+fortaleza,brazil
+medellín,colombia
+durban,south africa
+kanpur,india
+addis ababa,ethiopia
+nairobi,kenya
+jeddah,saudi arabia
+naples,italy
+kabul,afghanistan
+salvador,brazil
+harbin,china
+kano,nigeria
+casablanca,morocco
+cape town,south africa
+curitiba,brazil
+surabaya,indonesia
+san diego,united states
+seattle,united states
+rome,italy
+dar es salaam,tanzania
+taichung,china
+jaipur,india
+caracas,venezuela
+dakar,senegal
+kaohsiung,china
+minneapolis,united states
+lucknow,india
+amman,jordan
+tel aviv,israel
+guayaquil,ecuador
+kyiv,ukraine
+faisalabad,pakistan
+mashhad,iran
+izmir,turkey
+rawalpindi,pakistan
+tashkent,uzbekistan
+katowice,poland
+changchun,china
+campinas,brazil
+daegu,south korea
+changsha,china
+nagpur,india
+san juan,philippines
+aleppo,syria
+lisbon,portugal
+frankfurt am main,germany
+nanchang,china
+birmingham[],united kingdom
+tampa,united states
+medan,indonesia
+dalian,china
+tunis,tunisia
+shijiazhuang,china
+manchester,united kingdom
+port-au-prince,haiti
+damascus,syria
+ji'nan,china
+fukuoka,japan
+santo domingo,dominican republic
+havana,cuba
+cali,colombia
+denver,united states
+st. louis,united states
+colombo,brazil
+dubai,united arab emirates
+baltimore,united states
+sapporo,japan
+rotterdam,netherlands
+vancouver,canada
+preston,united kingdom
+patna,india
+sana'a,yemen
+warsaw,poland
+bonn,germany
+accra,ghana
+bucharest,romania
+yokohama,japan
+kunming,china
+guiyang,china
+zibo,china
+incheon,south korea
+zhengzhou,china
+taiyuan,china
+chaoyang,china
+brasilia,brazil
+zhongshan,china
+west midlands,united kingdom
+giza,egypt
+quezon city,philippines
+nanhai,china
+fuzhou,china
+lanzhou,china
+xiamen,china
+chittagong,bangladesh
+zaozhuang,china
+jilin,china
+linyi,china
+wenzhou,china
+stockholm,sweden
+puebla de zaragoza,mexico
+puning,china
+baku,azerbaijan
+ibadan,nigeria
+brisbane,australia
+minsk,belarus
+sikasso,mali
+nanchong,china
+nanning,china
+urumqi,china
+yantai,china
+fuyang,china
+tangshan,china
+maracaibo,venezuela
+hamburg,germany
+budapest,hungary
+shunde,china
+manaus,brazil
+xuzhou,china
+segou,mali
+baotou,china
+hefei,china
+vienna,austria
+indore,india
+asuncion,paraguay
+tianmen,china
+belgrade,serbia
+suzhou,china
+suizhou,china
+nanyang,china
+nakuru,kenya
+koulikoro,mali
+ningbo,china
+liuan,china
+anshan,china
+tengzhou,china
+qiqihaer,china
+pizhou,china
+taian,china
+datong,china
+kobe,japan
+hama,syria
+esfahan,iran
+tripoli,libya
+west yorkshire,united kingdom
+vadodara,india
+taizhou,china
+luoyang,china
+quito,ecuador
+jinjiang,china
+mopti,mali
+perth,australia
+daejeon,south korea
+kyoto,japan
+xiantao,china
+tangerang,indonesia
+bhopal,india
+coimbatore,india
+kharkiv,ukraine
+gwangju,south korea
+xinghua,china
+harare,zimbabwe
+fushun,china
+shangqiu,china
+belem,brazil
+wuxi,china
+hechuan,china
+wujin,china
+guigang,china
+jianyang,china
+huhehaote,china
+santa cruz,bolivia
+semarang,indonesia
+ludhiana,india
+novosibirsk,russia
+neijiang,china
+maputo,mozambique
+nan'an,china
+douala,cameroon
+weifang,china
+daqing,china
+kayes,mali
+tongzhou,china
+tabriz,iran
+homs,syria
+rugao,china
+guiping,china
+huainan,china
+kochi,india
+suining,china
+bozhou,china
+zhanjiang,china
+changde,china
+montevideo,uruguay
+xintai,china
+ekaterinoburg,russia
+juárez,mexico
+handan,china
+visakhapatnam,india
+kawasaki,japan
+jiangjin,china
+pingdu,china
+agra,india
+jiangyin,china
+tijuana,mexico
+liuyang,china
+bursa,turkey
+al-hasakeh,syria
+makkah,saudi arabia
+yaounde,cameroon
+xuanwei,china
+dengzhou,china
+palembang,indonesia
+nizhny novgorod,russia
+león,mexico
+guarulhos,brazil
+heze,china
+auckland,new zealand
+omdurman,sudan
+shantou,china
+leizhou,china
+yongcheng,china
+valencia,venezuela
+thane,india
+san antonio,united states
+xinyang,china
+luzhou,china
+almaty,kazakhstan
+changshu,china
+taixing,china
+phnom penh,cambodia
+laiwu,china
+xiaoshan,china
+yiyang,china
+goiânia,brazil
+liuzhou,china
+gaozhou,china
+fengcheng,china
+cixi,china
+karaj,iran
+mogadishu,somalia
+varanasi,india
+córdoba,argentina
+kampala,uganda
+ruian,china
+lianjiang,china
+huaian,china
+shiraz,iran
+multan,pakistan
+madurai,india
+münchen,germany
+kalyan,india
+quanzhou,china
+adana,turkey
+bazhong,china
+fès,morocco
+ouagadougou,burkina faso
+haicheng,china
+xishan,china
+leiyang,china
+caloocan,philippines
+kalookan,philippines
+jingzhou,china
+saitama,japan
+prague,czech republic
+fuqing,china
+kumasi,ghana
+meerut,india
+hyderabad,pakistan
+lufeng,china
+dongtai,china
+yixing,china
+mianyang,china
+wenling,china
+leqing,china
+ottawa,canada
+yushu,china
+barranquilla,colombia
+hiroshima,japan
+chifeng,china
+nashik,india
+makasar,indonesia
+sofia,bulgaria
+rizhao,china
+davao,philippines
+tianshui,china
+huzhou,china
+samara,russia
+omsk,russia
+gujranwala,pakistan
+adelaide,australia
+macheng,china
+wuxian,china
+bijie,china
+yuzhou,china
+leshan,china
+la matanza,argentina
+rosario,argentina
+jabalpur,india
+kazan,russia
+jimo,china
+dingzhou,china
+calgary,canada
+yerevan,armenia
+el-jadida,morocco
+jamshedpur,india
+zürich,switzerland
+zoucheng,china
+pikine-guediawaye,senegal
+anqiu,china
+guang'an,china
+chelyabinsk,russia
+conakry,guinea
+asansol,india
+shouguang,china
+changzhou,china
+ulsan,south korea
+zhuji,china
+toluca,mexico
+marrakech,morocco
+dhanbad,india
+tbilisi,georgia
+hanchuan,china
+lusaka,zambia
+qidong,china
+faridabad,india
+zaoyang,china
+zhucheng,china
+rostov-na-donu,russia
+jiangdu,china
+xiangcheng,china
+zigong,china
+jining,china
+edmonton,canada
+allahabad,india
+beiliu,china
+dnipropetrovsk,ukraine
+gongzhuling,china
+qinzhou,china
+ufa,russia
+sendai,japan
+volgograd,russia
+ezhou,china
+guatemala city,guatemala
+zhongxiang,china
+amsterdam,netherlands
+brussels,belgium
+bamako,mali
+ziyang,china
+antananarivo,madagascar
+mudanjiang,china
+amritsar,india
+vijayawada,india
+haora,india
+donetsk,ukraine
+huazhou,china
+pimpri chinchwad,india
+dublin,ireland
+rajkot,india
+sao luís,brazil
+beni-mellal,morocco
+lianyuan,china
+liupanshui,china
+kaduna,nigeria
+kitakyushu,japan
+qianjiang,china
+perm,russia
+odessa,ukraine
+qom,iran
+yongchuan,china
+peshawar,pakistan
+linzhou,china
+benxi,china
+ulaanbaatar,mongolia
+zhangqiu,china
+yongzhou,china
+sao gonçalo,brazil
+srinagar,india
+ghaziabad,india
+xinyi,china
+köln,germany
+zhangjiagang,china
+wafangdian,china
+xianyang,china
+liaocheng,china
+ahwaz,iran
+taishan,china
+linhai,china
+feicheng,china
+suwon,south korea
+wuwei,china
+haimen,china
+san luis potosí,mexico
+liling,china
+xinhui,china
+gaziantep,turkey
+krasnoyarsk,russia
+chiba,japan
+voronezh,russia
+durg-bhilai nagar,india
+ruzhou,china
+maceió,brazil
+yichun,china
+al-madinah,saudi arabia
+yulin,china
+seongnam,south korea
+yueyang,china
+yiwu,china
+san jose,united states
+jixi,china
+managua,nicaragua
+safi,morocco
+guangyuan,china
+soweto,south africa
+zhangjiakou,china
+baoding,china
+cartagena,colombia
+huludao,china
+pingdingshan,china
+torino,italy
+zengcheng,china
+laiyang,china
+qingzhou,china
+aurangabad,india
+lattakia,syria
+merida,mexico
+laizhou,china
+thiruvananthapuram,india
+weinan,china
+wuchang,china
+guangshui,china
+gaizhou,china
+göteborg,sweden
+xiaogan,china
+torreón,mexico
+jiaxing,china
+kozhikode,india
+sale,morocco
+zhuzhou,china
+tyneside,united kingdom
+hengyang,china
+dehui,china
+honghu,china
+danyang,china
+daye,china
+solapur,india
+xingning,china
+xiangfan,china
+shubra-el-khema,egypt
+luoding,china
+gwalior,india
+ranchi,india
+huiyang,china
+mombasa,kenya
+jinzhou,china
+jiangyan,china
+chenghai,china
+jiamusi,china
+songzi,china
+tegucigalpa,honduras
+wujiang,china
+jodhpur,india
+duque de caxias,brazil
+xi'ning,china
+yuyao,china
+hezhou,china
+jiangyou,china
+tiruchchirappalli,india
+baoshan,china
+saratov,russia
+nova iguaçu,brazil
+ankang,china
+gaomi,china
+yangchun,china
+santiago de los caballeros,dominican republic
+danzhou,china
+la paz,bolivia
+zhuanghe,china
+zhuhai,china
+zhaodong,china
+sakai,japan
+haikou,china
+jiaonan,china
+el alto,bolivia
+xuancheng,china
+wuchuan,china
+yuhang,china
+qinhuangdao,china
+bogor,indonesia
+kermanshah,iran
+longhai,china
+liverpool,united kingdom
+yanshi,china
+guwahati,india
+konya,turkey
+barquisimeto,venezuela
+yingde,china
+bengbu,china
+yibin,china
+chandigarh,india
+xiangxiang,china
+yinchuan,china
+valencia,spain
+guilin,china
+hamamatsu,japan
+sao bernardo do campo,brazil
+deir el-zor,syria
+bishkek,kyrgyzstan
+teresina,brazil
+suihua,china
+benghazi,libya
+jiutai,china
+meishan,china
+zaporizhya,ukraine
+gaoyou,china
+marseille,france
+kaifeng,china
+changning,china
+tongliao,china
+natal,brazil
+bandar lampung,indonesia
+dongying,china
+gaoan,china
+langzhong,china
+lichuan,china
+hubli-dharwad,india
+mysore,india
+niigata,japan
+indianapolis,united states
+jiaozhou,china
+pingxiang,china
+haiphong,viet nam
+arequipa,peru
+jacksonville,united states
+tanger,morocco
+dandong,china
+kishinev,moldova
+krasnodar,russia
+zagreb,croatia
+xinmi,china
+chaohu,china
+xinyu,china
+gongyi,china
+huixian,china
+xinxiang,china
+port elizabeth,south africa
+mendoza,argentina
+nantong,china
+pengzhou,china
+khulna,bangladesh
+malang,indonesia
+padang,indonesia
+anyang,china
+renqiu,china
+foshan,china
+anshun,china
+chihuahua,mexico
+campo grande,brazil
+lódz,poland
+goyang,south korea
+benin city,nigeria
+bucheon,south korea
+gaocheng,china
+pulandian,china
+hejian,china
+dafeng,china
+kraków,poland
+enshi,china
+dongyang,china
+lviv,ukraine
+kunshan,china
+shuangcheng,china
+salem,india
+jiaozuo,china
+ad-dammam,saudi arabia
+huaibei,china
+liyang,china
+samut prakan,thailand
+rongcheng,china
+cenxi,china
+nampho,north korea
+columbus,united states
+bareilly,india
+leping,china
+laixi,china
+liaoyang,china
+zhaotong,china
+jerusalem,israel
+tainan,china
+cuernavaca,mexico
+riga,latvia
+linfen,china
+quebec,canada
+lingbao,china
+shangyu,china
+wuan,china
+hailun,china
+xingyi,china
+wuxue,china
+cebu,philippines
+aguascalientes,mexico
+tolyatti,russia
+hamilton,canada
+zhoushan,china
+langfang,china
+osasco,brazil
+nonthaburi,thailand
+dashiqiao,china
+tongxiang,china
+yichang,china
+yangzhou,china
+blantyre city,malawi
+hamhung,north korea
+jalandhar,india
+al-rakka,syria
+niamey,niger
+xiangtan,china
+winnipeg,canada
+oran,algeria
+kota,india
+sevilla,spain
+navi mumbai,india
+port harcourt,nigeria
+saltillo,mexico
+khartoum north,sudan
+shizuoka,japan
+yuanjiang,china
+raipur,india
+kryviy rig,ukraine
+yingkou,china
+wuhu,china
+zhenjiang,china
+queretaro,mexico
+nankang,china
+wugang,china
+hegang,china
+linqing,china
+pretoria,south africa
+zunyi,china
+panzhihua,china
+austin,united states
+changle,china
+lianyungang,china
+yancheng,china
+zunhua,china
+changyi,china
+meknès,morocco
+qiongshan,china
+bulawayo,zimbabwe
+wendeng,china
+okayama,japan
+santo andre,brazil
+rabat,morocco
+pakanbaru,indonesia
+nehe,china
+memphis,united states
+joao pessoa,brazil
+kathmandu,nepal
+longkou,china
+shengzhou,china
+antalya,turkey
+kumamoto,japan
+lilongwe,malawi
+mexicali,mexico
+kaiping,china
+palermo,italy
+aligarh,india
+nottingham,united kingdom
+haining,china
+mosul,iraq
+hermosillo,mexico
+tongcheng,china
+shulan,china
+miluo,china
+bhubaneswar,india
+yangquan,china
+chenzhou,china
+haiyang,china
+morelia,mexico
+huangshi,china
+xinmin,china
+tetouan,morocco
+barnaul,russia
+qixia,china
+jaboatao dos guarapes,brazil
+chongzhou,china
+cotonou,benin
+yingcheng,china
+zaragoza,spain
+changzhi,china
+qujing,china
+linghai,china
+changge,china
+trujillo,peru
+tampico,mexico
+maoming,china
+morón,argentina
+la plata,argentina
+ciudad guayana,venezuela
+moradabad,india
+jieshou,china
+sheffield,united kingdom
+donggang,china
+jingjiang,china
+acheng,china
+acapulco,mexico
+veracruz,mexico
+ulyanovsk,russia
+wroclaw,poland
+jieyang,china
+shaoxing,china
+qian'an,china
+nanchuan,china
+qionglai,china
+deyang,china
+sagamihara,japan
+fuxin,china
+jiyuan,china
+puente alto,chile
+qufu,china
+gaoyao,china
+gorakhpur,india
+fort worth,united states
+xinji,china
+san miguel de tucumán,argentina
+dujiangyan,china
+the hague,netherlands
+bhiwandi,india
+culiacán rosales,mexico
+lingyuan,china
+xingyang,china
+maiduguri,nigeria
+genova,italy
+meihekou,china
+izhevsk,russia
+jeonju,south korea
+leling,china
+xichang,china
+colombo,sri lanka
+zaria,nigeria
+anlu,china
+sao jose dos campos,brazil
+charlotte,united states
+yizheng,china
+malmö,sweden
+weihai,china
+xinzheng,china
+dengfeng,china
+vladivostok,russia
+shaoyang,china
+jammu,india
+lanxi,china
+yuncheng,china
+kagoshima,japan
+yaroslave,russia
+contagem,brazil
+shishou,china
+panjin,china
+zamboanga,philippines
+orumiyeh,iran
+binzhou,china
+kisumu,kenya
+baoji,china
+uberlândia,brazil
+el paso,united states
+yunzhou,china
+kenitra,morocco
+diyarbakir,turkey
+jurong,china
+cúcuta,colombia
+zhaoyuan,china
+huizhou,china
+tianchang,china
+dortmund,germany
+shihezi,china
+shiyan,china
+cuttack,india
+cochabamba,bolivia
+cheongju,south korea
+jingmen,china
+shangzhi,china
+anqing,china
+chongjin,north korea
+stuttgart,germany
+rushan,china
+kingston,jamaica
+milwaukee,united states
+sorocaba,brazil
+glasgow,united kingdom
+khabarovsk,russia
+guanghan,china
+warangal,india
+irkutsk,russia
+tyumen,russia
+lomas de zamora,argentina
+beipiao,china
+funabashi,japan
+mingguang,china
+düsseldorf,germany
+shenzhou,china
+içel,turkey
+zhangzhou,china
+xianning,china
+maanshan,china
+bandjarmasin,indonesia
+callao,peru
+poznan,poland
+kayseri,turkey
+chon buri,thailand
+quetta,pakistan
+shuozhou,china
+samarinda,indonesia
+helsinki,finland
+akesu,china
+novokuznetsk,russia
+málaga,spain
+hachioji,japan
+ribeirao prêto,brazil
+beihai,china
+jamnagar,india
+nouakchott,mauritania
+bazhou,china
+yongkang,china
+louisville,united states
+chizhou,china
+huaiyin,china
+fuan,china
+bhilai nagar,india
+dezhou,china
+makhachkala,russia
+xingping,china
+jiujiang,china
+bristol,united kingdom
+botou,china
+fengnan,china
+astana,kazakhstan
+yizhou,china
+amravati,india
+nashville-davidson,united states
+batam,indonesia
+orenburg,russia
+zhuozhou,china
+las vegas,united states
+cancun,mexico
+longyan,china
+oslo,norway
+cuiabá,brazil
+tiruppur,india
+vilnius,lithuania
+bremen,germany
+gold coast-tweed,australia
+gaobeidian,china
+mangalore,india
+songyuan,china
+yangjiang,china
+wanyuan,china
+jiangmen,china
+xingtai,china
+shaoguan,china
+feira de santana,brazil
+guixi,china
+ruijin,china
+zahedan,iran
+jinzhong,china
+portland,united states
+jintan,china
+reynosa,mexico
+ilorin,nigeria
+oklahoma city,united states
+nakhon ratchasima,thailand
+n'djamena,chad
+shangzhou,china
+panshi,china
+kerman,iran
+kaiyuan,china
+islamabad,pakistan
+sarajevo,bosnia and herzegovina
+bikaner,india
+dushanbe,tajikistan
+vientiane,laos
+dehradun,india
+zhangshu,china
+beining,china
+abu dhabi,united arab emirates
+shimkent,kazakhstan
+xingcheng,china
+imbaba,egypt
+yicheng,china
+skoplje,macedonia
+kadhimain,iraq
+at-ta'if,saudi arabia
+dali,china
+fuding,china
+renhuai,china
+mira-bhayandar,india
+kemerovo,russia
+duisburg,germany
+rasht,iran
+halifax,canada
+regina,canada
+saskatoon,canada
+victoria,canada
