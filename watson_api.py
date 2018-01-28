@@ -8,13 +8,13 @@ from sys import argv
 from get_creds import get_creds
 
 default_text = "It is cold and rainy, what a great day we're having..."
-default_text = "I still have a dream, a dream deeply rooted in the American dream %E2%80%93 one day this nation will rise up and live up to its creed. We hold these truths to be self evident, that all men are created equal."
+# default_text = "I still have a dream, a dream deeply rooted in the American dream %E2%80%93 one day this nation will rise up and live up to its creed. We hold these truths to be self evident, that all men are created equal."
 
-def builder(text):
-    baseurl = "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27&text=" + text + "&features=sentiment,keywords"
+def build_url(text):
+    baseurl = "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27&text=" + text + "&features=sentiment,emotion,concepts,keywords"
     return baseurl.replace(" ", "%20")
 
-def fetcher(full_api_url, username, password):
+def fetch_json(full_api_url, username, password):
     passman = urllib.request.HTTPPasswordMgrWithDefaultRealm()
     passman.add_password(None,
                               uri=full_api_url,
@@ -33,8 +33,8 @@ def main():
     else:
         text = default_text
     (username, password) = get_creds("credentials")
-    full_url = builder(text)
-    json_data = fetcher(full_url, username, password)
+    full_url = build_url(text)
+    json_data = fetch_json(full_url, username, password)
     pprint.pprint(json_data)
 
 if __name__ == "__main__":
