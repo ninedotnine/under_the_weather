@@ -10,10 +10,10 @@ from get_creds import get_creds
 default_text = "It is cold and rainy, what a great day we're having..."
 
 def get_strongest_emotion(json_data):
+#     emotion = json_data.get('emotion').get('document').get('emotion')
     emotions = json_data.get('emotion').get('document').get('emotion')
-    strongest_emotion = max(emotions, key=(lambda x: x[1]))
-    print(strongest_emotion, emotions[strongest_emotion])
-    return strongest_emotion
+#     print(emotions)
+    return max(emotions, key=(lambda x: emotions[x]))
 
 def main():
     if len(argv) > 1:
@@ -23,6 +23,7 @@ def main():
     (username, password) = get_creds("credentials")
     full_url = build_url(text)
     json_data = fetch_json(full_url, username, password)
+#     pprint(json_data)
     strongest_emotion = get_strongest_emotion(json_data)
     print("strongest emotion is : " + strongest_emotion)
 
