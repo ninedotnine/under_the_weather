@@ -22,14 +22,13 @@ with open("common_words.txt") as fd:
 
 class StreamListenerWeather(StreamListener):
     def on_update(self, status):
-        print("-----------received status.------------------")
-        print("i don't really care about these.")
-        if status.get("account").get("acct") == "UnderTheWeather":
+        name = status.get("account", {}).get("acct")
+        print(f"received status from {name}.")
+        if name == "UnderTheWeather":
             print("this is just feedback!")
-#         pprint(status)
 
     def on_notification(self, notification):
-        print("-----------NOTIFICATION------------------")
+        print("new notification!")
 #         pprint(notification)
         acct = notification.get("account").get("acct")
         notif_type = notification.get("type")
@@ -45,12 +44,11 @@ class StreamListenerWeather(StreamListener):
         elif notif_type != "mention":
             print("weird, unknown notification type.")
             return
+
         status = notification.get("status")
-#         pprint(status)
         if status == None:
             print("status was none.")
             return
-        print((status.get("content")))
         content = cleanup(status.get("content"))
         if content == None:
             print("content was none.")
