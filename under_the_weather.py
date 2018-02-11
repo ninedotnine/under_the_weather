@@ -100,12 +100,16 @@ mastodon = Mastodon(client_id = 'undertheweather.secret',
 
 def main():
     mastodon.account_update_credentials(note="prickly weather reporter")
+    print("online.")
     try:
         weatherListener = StreamListenerWeather()
         mastodon.stream_user(listener=weatherListener)
-    except:
+    except KeyboardInterrupt:
+        print("interrupt received, signing off...")
         mastodon.account_update_credentials(note="status: offline.\nask @danso.")
         print("signed off successfully.")
+    except:
+        print("error:")
         raise
 
 if __name__ == "__main__":
