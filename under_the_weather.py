@@ -7,10 +7,13 @@ from mastodon import Mastodon, StreamListener
 from openweathermap import try_city, get_winnipeg
 
 cities = {} # mega-list of all the most popular cities
-with open("world_largest_cities.txt") as fd:
-    for line in fd:
-        (city, country) = line.split(',')
-        cities[city] = country
+try:
+    with open("world_largest_cities.txt") as fd:
+        for line in fd:
+            (city, country) = line.split(',')
+            cities[city] = country
+except FileNotFoundError:
+    print("error: could not load largst cities")
 
 common_words = [] # populate a list of common words that are likely not names
 with open("common_words.txt") as fd:
