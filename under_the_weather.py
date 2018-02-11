@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-from pprint import pprint
 from time import sleep
 
 from mastodon import Mastodon, StreamListener
@@ -29,7 +28,6 @@ class StreamListenerWeather(StreamListener):
 
     def on_notification(self, notification):
         print("new notification!")
-#         pprint(notification)
         acct = notification.get("account").get("acct")
         notif_type = notification.get("type")
         if notif_type == "reblog":
@@ -56,6 +54,7 @@ class StreamListenerWeather(StreamListener):
         if content == "":
             mastodon.status_post(f"what do you want?", in_reply_to_id=status)
             return
+        # first try to find something in the dict, then just guess every word
         for city in cities:
             if city in content:
                 print("TRYING: " + city)
@@ -73,6 +72,7 @@ class StreamListenerWeather(StreamListener):
                 report = try_city(word)
                 if report != None:
                     break
+        # finally, toot the report if we have one!
         if report != None:
             print(report)
             mastodon.status_post(f"@{acct} {report}", in_reply_to_id=status)
