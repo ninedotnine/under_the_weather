@@ -87,13 +87,11 @@ class StreamListenerWeather(StreamListener):
 def cleanup(content):
     if content == None:
         return None
-#     print("----- 1 content is: ", content)
+    # there must be a better way to de-HTML this string...
     content = content.replace("<p>", "").replace("</p>", "")
     content = content.replace("&apos;", "'").split()
-#     print("----- 2 content is: ", content)
     content = (' '.join([word.lower() for word in content if
         set(word).isdisjoint(set("@<>\""))]))
-    print("----- cleaned content is: ", content)
     return content
 
 mastodon = Mastodon(client_id = 'undertheweather.secret',
