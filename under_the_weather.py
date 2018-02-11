@@ -7,7 +7,7 @@ from openweathermap import try_city, get_winnipeg
 
 cities = {} # mega-list of all the most popular cities
 try:
-    with open("world_largest_cities.txt") as fd:
+    with open("largest_cities.txt") as fd:
         for line in fd:
             (city, country) = line.split(',')
             cities[city] = country
