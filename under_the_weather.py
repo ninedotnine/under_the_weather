@@ -58,13 +58,15 @@ class StreamListenerWeather(StreamListener):
             mastodon.status_post(f"what do you want?", in_reply_to_id=status)
             return
         # first try to find something in the dict, then just guess every word
-        for city in cities:
-            if city in content:
-                print("TRYING: " + city)
-                report = try_city(f"{city},{cities[city]}")
+        words = sorted(content.split(), key=len, reverse=True)
+        print("words is: " + str(words))
+        for word in words:
+            if word in cities:
+                print("TRYING: " + f"{word},{cities[word]}")
+                report = try_city(f"{word},{cities[word]}")
                 break
-        else:
-            for word in sorted(content.split(), key=len, reverse=True):
+        else: # found nothing in the largest cities dict
+            for word in words:
                 if word in common_words: # this could be way less inefficient
                     continue
                 # here it tries to guess which of the other words might be a
