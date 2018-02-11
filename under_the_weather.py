@@ -76,9 +76,10 @@ class StreamListenerWeather(StreamListener):
         if report != None:
             print(report)
             mastodon.status_post(f"@{acct} {report}", in_reply_to_id=status)
-        print("error 404") # report was None
-        mastodon.status_post(f"sorry @{acct}, i didn't find your city :^(",
-                             in_reply_to_id = status)
+        else:
+            print("error 404") # report was None
+            mastodon.status_post(f"sorry @{acct}, i didn't find your city :^(",
+                                 in_reply_to_id = status)
 
 def cleanup(content):
     if content == None:
