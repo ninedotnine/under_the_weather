@@ -57,7 +57,7 @@ def try_city(city_name):
     except urllib.request.HTTPError:
         return None
     (city, country, weather, temp) = sort_data(json_data)
-    return f"\nCurrent weather in {city}, {country}:\n{weather}, {temp} \xb0C"
+    return f"Current weather in {city}, {country}:\n{weather}, {temp} \xb0C"
 
 def get_winnipeg():
     (win, can, weather, temp) = sort_data(fetch_data(build_url("winnipeg")))

@@ -9,7 +9,7 @@ cities = {} # mega-list of all the most popular cities
 try:
     with open("largest_cities.txt") as fd:
         for line in fd:
-            (city, country) = line.split(',')
+            (city, country) = line.rstrip().split(',')
             cities[city] = country
 except FileNotFoundError:
     print("error: could not load largest cities")
@@ -78,7 +78,7 @@ class StreamListenerWeather(StreamListener):
         # finally, toot the report if we have one!
         if report != None:
             print(report)
-            mastodon.status_post(f"@{acct} {report}", in_reply_to_id=status)
+            mastodon.status_post(f"@{acct}\n{report}", in_reply_to_id=status)
         else:
             print("error 404") # report was None
             mastodon.status_post(f"sorry @{acct}, i didn't find your city :^(",
