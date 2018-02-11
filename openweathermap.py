@@ -5,19 +5,25 @@ import json
 import urllib.request
 from sys import argv
 from time import strftime, localtime, time
+from os import environ
 
 from pprint import pprint
 
 default_city = 'montreal'
 
-apikey_filename = "openweathermap_apikey"
+apikey_filename = "/private/openweathermaps_api_key"
 
 def load_apikey(filename):
+    homedir = environ.get("HOME")
     try:
-        with open(filename) as fd:
+        with open(homedir + apikey_filename) as fd:
             apikey = fd.read().strip()
     except FileNotFoundError:
         print("no openweathermap api key provided.")
+        raise
+        exit(3)
+    except:
+        print("error loading openweathermaps API key.")
         exit(2)
     return apikey
 
