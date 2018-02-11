@@ -12,12 +12,15 @@ try:
             (city, country) = line.split(',')
             cities[city] = country
 except FileNotFoundError:
-    print("error: could not load largst cities")
+    print("error: could not load largest cities")
 
 common_words = [] # populate a list of common words that are likely not names
-with open("common_words.txt") as fd:
-    for word in fd:
-        common_words.append(word.strip())
+try:
+    with open("common_words.txt") as fd:
+        for word in fd:
+            common_words.append(word.strip())
+except FileNotFoundError:
+    print("error: could not load list of common words.")
 
 class StreamListenerWeather(StreamListener):
     def on_update(self, status):
