@@ -72,14 +72,19 @@ class StreamListenerWeather(StreamListener):
             self.mastodon.status_post(f"what do you want?", in_reply_to_id=status)
             return
 
-        if msg not in self.cities:
-            # try to normalize the text
+        report = None
+
+        if "," in msg:  # assume the user passed 'city,country code'
+            print("TRYING: " + msg)
+            report = try_city(msg, self.apikey)
+        else:
+            # normalize the text
             msg = unicodedata.normalize("NFD", msg).encode("ascii", "ignore").decode()
+            if msg in self.cities:
+                print("TRYING: " + f"{msg},{self.cities[msg]}")
+                report = try_city(f"{msg},{self.cities[msg]}", self.apikey)
 
-        if msg in self.cities:
-            print("TRYING: " + f"{msg},{self.cities[msg]}")
-            report = try_city(f"{msg},{self.cities[msg]}", self.apikey)
-
+        if report:
             print(report)
             self.mastodon.status_post(f"@{acct}\n{report}", in_reply_to_id=status)
         else:

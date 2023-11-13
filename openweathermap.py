@@ -25,8 +25,12 @@ def try_city(city_name, apikey):
         + apikey
     )
 
-    with urllib.request.urlopen(full_api_url) as url:
-        json_data = json.loads(url.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(full_api_url) as url:
+            json_data = json.loads(url.read().decode("utf-8"))
+    except urllib.request.HTTPError as exc:
+        print("API error: ", exc)
+        return
 
     city = json_data.get("name")
     country = json_data.get("sys").get("country")
