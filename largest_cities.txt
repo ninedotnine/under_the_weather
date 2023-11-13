@@ -88,14 +88,14 @@ melbourne,au
 luanda,ao
 hangzhou,cn
 algiers,dz
-hà noi,vn
+ha noi,vn
 montreal,ca
 xi'an,cn
 pyongyang,kp
 qingdao,cn
 surat,in
 fortaleza,br
-medellín,co
+medellin,co
 durban,za
 kanpur,in
 addis ababa,et
@@ -141,7 +141,7 @@ aleppo,sy
 lisbon,pt
 frankfurt am main,de
 nanchang,cn
-birmingham[],uk
+birmingham,uk
 tampa,us
 medan,id
 dalian,cn
@@ -289,7 +289,7 @@ changde,cn
 montevideo,uy
 xintai,cn
 ekaterinoburg,ru
-juárez,mx
+juarez,mx
 handan,cn
 visakhapatnam,in
 kawasaki,jp
@@ -307,7 +307,7 @@ xuanwei,cn
 dengzhou,cn
 palembang,id
 nizhny novgorod,ru
-león,mx
+leon,mx
 guarulhos,br
 heze,cn
 auckland,nz
@@ -327,7 +327,7 @@ phnom penh,kh
 laiwu,cn
 xiaoshan,cn
 yiyang,cn
-goiânia,br
+goiania,br
 liuzhou,cn
 gaozhou,cn
 fengcheng,cn
@@ -335,7 +335,7 @@ cixi,cn
 karaj,ir
 mogadishu,so
 varanasi,in
-córdoba,ar
+cordoba,ar
 kampala,ug
 ruian,cn
 lianjiang,cn
@@ -343,12 +343,12 @@ huaian,cn
 shiraz,ir
 multan,pk
 madurai,in
-münchen,de
+munchen,de
 kalyan,in
 quanzhou,cn
 adana,tr
 bazhong,cn
-fès,ma
+fes,ma
 ouagadougou,bf
 haicheng,cn
 xishan,cn
@@ -399,7 +399,7 @@ calgary,ca
 yerevan,am
 el-jadida,ma
 jamshedpur,in
-zürich,ch
+zurich,ch
 zoucheng,cn
 pikine-guediawaye,sn
 anqiu,cn
@@ -452,7 +452,7 @@ huazhou,cn
 pimpri chinchwad,in
 dublin,ie
 rajkot,in
-sao luís,br
+sao luis,br
 beni-mellal,ma
 lianyuan,cn
 liupanshui,cn
@@ -469,11 +469,11 @@ benxi,cn
 ulaanbaatar,mn
 zhangqiu,cn
 yongzhou,cn
-sao gonçalo,br
+sao goncalo,br
 srinagar,in
 ghaziabad,in
 xinyi,cn
-köln,de
+koln,de
 zhangjiagang,cn
 wafangdian,cn
 xianyang,cn
@@ -485,7 +485,7 @@ feicheng,cn
 suwon,kr
 wuwei,cn
 haimen,cn
-san luis potosí,mx
+san luis potosi,mx
 liling,cn
 xinhui,cn
 gaziantep,tr
@@ -494,7 +494,7 @@ chiba,jp
 voronezh,ru
 durg-bhilai nagar,in
 ruzhou,cn
-maceió,br
+maceio,br
 yichun,cn
 al-madinah,sa
 yulin,cn
@@ -525,9 +525,9 @@ weinan,cn
 wuchang,cn
 guangshui,cn
 gaizhou,cn
-göteborg,se
+goteborg,se
 xiaogan,cn
-torreón,mx
+torreon,mx
 jiaxing,cn
 kozhikode,in
 sale,ma
@@ -563,7 +563,7 @@ jiangyou,cn
 tiruchchirappalli,in
 baoshan,cn
 saratov,ru
-nova iguaçu,br
+nova iguacu,br
 ankang,cn
 gaomi,cn
 yangchun,cn
@@ -651,7 +651,7 @@ foshan,cn
 anshun,cn
 chihuahua,mx
 campo grande,br
-lódz,pl
+lodz,pl
 goyang,kr
 benin city,ng
 bucheon,kr
@@ -659,7 +659,7 @@ gaocheng,cn
 pulandian,cn
 hejian,cn
 dafeng,cn
-kraków,pl
+krakow,pl
 enshi,cn
 dongyang,cn
 lviv,ua
@@ -739,7 +739,7 @@ lianyungang,cn
 yancheng,cn
 zunhua,cn
 changyi,cn
-meknès,ma
+meknes,ma
 qiongshan,cn
 bulawayo,zw
 wendeng,cn
@@ -789,7 +789,7 @@ changge,cn
 trujillo,pe
 tampico,mx
 maoming,cn
-morón,ar
+moron,ar
 la plata,ar
 ciudad guayana,ve
 moradabad,in
@@ -817,11 +817,11 @@ gaoyao,cn
 gorakhpur,in
 fort worth,us
 xinji,cn
-san miguel de tucumán,ar
+san miguel de tucuman,ar
 dujiangyan,cn
 the hague,nl
 bhiwandi,in
-culiacán rosales,mx
+culiacan rosales,mx
 lingyuan,cn
 xingyang,cn
 maiduguri,ng
@@ -837,7 +837,7 @@ anlu,cn
 sao jose dos campos,br
 charlotte,us
 yizheng,cn
-malmö,se
+malmo,se
 weihai,cn
 xinzheng,cn
 dengfeng,cn
@@ -856,13 +856,13 @@ orumiyeh,ir
 binzhou,cn
 kisumu,ke
 baoji,cn
-uberlândia,br
+uberlandia,br
 el paso,us
 yunzhou,cn
 kenitra,ma
 diyarbakir,tr
 jurong,cn
-cúcuta,co
+cucuta,co
 zhaoyuan,cn
 huizhou,cn
 tianchang,cn
@@ -891,9 +891,9 @@ lomas de zamora,ar
 beipiao,cn
 funabashi,jp
 mingguang,cn
-düsseldorf,de
+dusseldorf,de
 shenzhou,cn
-içel,tr
+icel,tr
 zhangzhou,cn
 xianning,cn
 maanshan,cn
@@ -908,9 +908,9 @@ samarinda,id
 helsinki,fi
 akesu,cn
 novokuznetsk,ru
-málaga,es
+malaga,es
 hachioji,jp
-ribeirao prêto,br
+ribeirao preto,br
 beihai,cn
 jamnagar,in
 nouakchott,mr
@@ -939,7 +939,7 @@ las vegas,us
 cancun,mx
 longyan,cn
 oslo,norway
-cuiabá,br
+cuiaba,br
 tiruppur,in
 vilnius,lt
 bremen,de

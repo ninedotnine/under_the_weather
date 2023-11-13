@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from time import sleep
+import unicodedata
 
 from mastodon import Mastodon, StreamListener
 
@@ -17,14 +17,6 @@ class StreamListenerWeather(StreamListener):
                     self.cities[city] = country
         except FileNotFoundError:
             print("error: could not load largest cities")
-
-        self.common_words = []  # populate a list of common words that are likely not names
-        try:
-            with open("common_words.txt") as fd:
-                for word in fd:
-                    self.common_words.append(word.strip())
-        except FileNotFoundError:
-            print("error: could not load list of common words.")
 
         self.apikey = load_apikey("/private/openweathermaps_api_key")
 
@@ -63,41 +55,31 @@ class StreamListenerWeather(StreamListener):
         if content is None:
             print("content was none.")
             return
-        else:
-            # there must be a better way to de-HTML this string...
-            print("content is: " + content.encode())
-            content = content.replace("<p>", "").replace("</p>", "")
-            content = content.replace("&apos;", "'").split()
-            content = " ".join(
-                [word.lower() for word in content if set(word).isdisjoint(set('@<>"'))]
-            )
 
-        if content == "":
+        # there must be a better way to de-HTML this string...
+        print("message is: " + content)
+        content = content.replace("<p>", "").replace("</p>", "")
+        content = content.replace("&apos;", "'")
+        msg = " ".join(
+            [
+                word.lower()
+                for word in content.split()
+                if set(word).isdisjoint(set('@<>"'))
+            ]
+        )
+
+        if not msg:
             self.mastodon.status_post(f"what do you want?", in_reply_to_id=status)
             return
-        # first try to find something in the dict, then just guess every word
-        words = sorted(content.split(), key=len, reverse=True)
-        print("words is: " + str(words))
-        report = None
-        for word in words:
-            if word in self.cities:
-                print("TRYING: " + f"{word},{self.cities[word]}")
-                report = try_city(f"{word},{self.cities[word]}", self.apikey)
-                break
-        else:  # found nothing in the largest cities dict
-            for word in words:
-                if word in self.common_words:  # this could be way less inefficient
-                    continue
-                # here it tries to guess which of the other words might be a
-                # city by trying them in order of length until it gets a
-                # hit. is this even a good idea at all?
-                sleep(0.5)
-                print("GUESSING: " + word)
-                report = try_city(word, self.apikey)
-                if report is not None:
-                    break
-        # finally, toot the report if we have one!
-        if report is not None:
+
+        if msg not in self.cities:
+            # try to normalize the text
+            msg = unicodedata.normalize("NFD", msg).encode("ascii", "ignore").decode()
+
+        if msg in self.cities:
+            print("TRYING: " + f"{msg},{self.cities[msg]}")
+            report = try_city(f"{msg},{self.cities[msg]}", self.apikey)
+
             print(report)
             self.mastodon.status_post(f"@{acct}\n{report}", in_reply_to_id=status)
         else:
@@ -110,8 +92,6 @@ class StreamListenerWeather(StreamListener):
 def main():
     mastodon = Mastodon(
         client_id="pytooter_clientcred.secret",
-        #access_token="mastodon_credential.secret",
-        #api_base_url="https://mastodon.social",
     )
 
     mastodon.account_update_credentials(note="prickly weather reporter")

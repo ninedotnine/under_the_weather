@@ -18,7 +18,12 @@ def load_apikey(filename):
 def try_city(city_name, apikey):
     city_name = city_name.strip().rstrip("!?").replace("&apos;", "'").strip()
 
-    full_api_url = BASE_URL + urllib.parse.quote(city_name) + "&mode=json&units=metric&APPID=" + apikey
+    full_api_url = (
+        BASE_URL
+        + urllib.parse.quote(city_name)
+        + "&mode=json&units=metric&APPID="
+        + apikey
+    )
 
     with urllib.request.urlopen(full_api_url) as url:
         json_data = json.loads(url.read().decode("utf-8"))
