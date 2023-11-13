@@ -2,7 +2,27 @@ under the weather: weather bot for mastodon.
 
 try it out! https://mastodon.social/@UnderTheWeather
 
-Examples:
+
+
+Steps to run it:
+
+
+1) Install dependencies:
+
+pip install Mastodon.py
+
+2) Obtain an api key for openweathermap and save it as openweather_apikey.secret
+
+(Consult openweathermap.org for details)
+
+3) Obtain the mastodon credentials and save them as mastodon_credential.secret
+
+(Consult Mastodon.py documentation for details)
+
+
+
+Testing city names directly on API (mastodon credentials not required):
+
 
 user@host:~/under_the_weather$ python3 openweathermap.py 'Sao Paulo'
 Current weather in São Paulo, BR:
@@ -15,4 +35,3 @@ few clouds, 27.29 °C
 user@host:~/under_the_weather$ python3 openweathermap.py 'københavn'
 Current weather in Copenhagen municipality, DK:
 light rain, 5.78 °C
-

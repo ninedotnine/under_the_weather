@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import json
-import os
 import sys
 import urllib.parse
 import urllib.request
@@ -11,7 +10,7 @@ DEFAULT_CITY = "montreal"
 
 
 def load_apikey(filename):
-    with open(os.environ.get("HOME") + filename) as fd:
+    with open(filename) as fd:
         return fd.read().strip()
 
 

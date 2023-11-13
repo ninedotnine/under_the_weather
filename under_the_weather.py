@@ -6,9 +6,8 @@ from openweathermap import try_city, load_apikey
 
 
 class StreamListenerWeather(StreamListener):
-    def __init__(self, mastodon: Mastodon):
-        self.apikey = load_apikey("/private/openweathermaps_api_key")
-
+    def __init__(self, mastodon: Mastodon, apikey_filename):
+        self.apikey = load_apikey(apikey_filename)
         self.mastodon = mastodon
         super().__init__()
 
@@ -81,13 +80,15 @@ class StreamListenerWeather(StreamListener):
 
 def main():
     mastodon = Mastodon(
-        client_id="pytooter_clientcred.secret",
+        client_id="mastodon_credential.secret",
     )
 
     mastodon.account_update_credentials(note="prickly weather reporter")
     print("online.")
     try:
-        mastodon.stream_user(listener=StreamListenerWeather(mastodon))
+        mastodon.stream_user(
+            listener=StreamListenerWeather(mastodon, "openweather_apikey.secret")
+        )
     except KeyboardInterrupt:
         print("interrupt received, signing off...")
         mastodon.account_update_credentials(note="status: offline.\nask @danso.")

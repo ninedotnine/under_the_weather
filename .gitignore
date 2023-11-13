@@ -1,4 +1,2 @@
-__pycache__
-mastodon_credentials 
-mastodon_credential.secret 
-undertheweather.secret
+mastodon_credential.secret
+openweather_apikey.secret
