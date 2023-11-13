@@ -44,6 +44,6 @@ if __name__ == "__main__":
     print(
         try_city(
             sys.argv[1] if len(sys.argv) > 1 else DEFAULT_CITY,
-            load_apikey("/private/openweathermaps_api_key"),
+            "52e0b1c18a7de3eb77e20283d0443704",  # free-tier api key as a convenience.
         )
     )

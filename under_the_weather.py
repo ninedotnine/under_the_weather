@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import unicodedata
-
 from mastodon import Mastodon, StreamListener
 
 from openweathermap import try_city, load_apikey
@@ -9,15 +7,6 @@ from openweathermap import try_city, load_apikey
 
 class StreamListenerWeather(StreamListener):
     def __init__(self, mastodon: Mastodon):
-        self.cities = {}  # mega-list of all the most popular cities
-        try:
-            with open("largest_cities.txt") as fd:
-                for line in fd:
-                    (city, country) = line.rstrip().split(",")
-                    self.cities[city] = country
-        except FileNotFoundError:
-            print("error: could not load largest cities")
-
         self.apikey = load_apikey("/private/openweathermaps_api_key")
 
         self.mastodon = mastodon
@@ -56,8 +45,13 @@ class StreamListenerWeather(StreamListener):
             print("content was none.")
             return
 
-        # there must be a better way to de-HTML this string...
         print("message is: " + content)
+        # example content (line break added for readability):
+        # <p><span class="h-card" translate="no">
+        # <a href="https://bolha.one/@clima" class="u-url mention">@<span>clima</span></a>
+        # </span> São Paulo</p>
+
+        # there must be a better way to de-HTML this string...
         content = content.replace("<p>", "").replace("</p>", "")
         content = content.replace("&apos;", "'")
         msg = " ".join(
@@ -72,17 +66,8 @@ class StreamListenerWeather(StreamListener):
             self.mastodon.status_post(f"what do you want?", in_reply_to_id=status)
             return
 
-        report = None
-
-        if "," in msg:  # assume the user passed 'city,country code'
-            print("TRYING: " + msg)
-            report = try_city(msg, self.apikey)
-        else:
-            # normalize the text
-            msg = unicodedata.normalize("NFD", msg).encode("ascii", "ignore").decode()
-            if msg in self.cities:
-                print("TRYING: " + f"{msg},{self.cities[msg]}")
-                report = try_city(f"{msg},{self.cities[msg]}", self.apikey)
+        print("TRYING: " + msg)
+        report = try_city(msg, self.apikey)
 
         if report:
             print(report)

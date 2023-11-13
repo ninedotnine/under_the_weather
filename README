@@ -1,3 +1,18 @@
 under the weather: weather bot for mastodon.
 
 try it out! https://mastodon.social/@UnderTheWeather
+
+Examples:
+
+user@host:~/under_the_weather$ python3 openweathermap.py 'Sao Paulo'
+Current weather in São Paulo, BR:
+clear sky, 32.07 °C
+
+user@host:~/under_the_weather$ python3 openweathermap.py 'São Gonçalo do Amarante'
+Current weather in São Gonçalo do Amarante, BR:
+few clouds, 27.29 °C
+
+user@host:~/under_the_weather$ python3 openweathermap.py 'københavn'
+Current weather in Copenhagen municipality, DK:
+light rain, 5.78 °C
+
