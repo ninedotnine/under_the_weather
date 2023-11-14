@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from lxml import etree
 from mastodon import Mastodon, StreamListener
 
 from openweathermap import try_city, load_apikey
@@ -46,20 +47,14 @@ class StreamListenerWeather(StreamListener):
 
         print("message is: " + content)
         # example content (line break added for readability):
-        # <p><span class="h-card" translate="no">
-        # <a href="https://bolha.one/@clima" class="u-url mention">@<span>clima</span></a>
-        # </span> São Paulo</p>
+        # <p><a href="https://bolha.one/@cadusilva" class="u-url mention" rel="nofollow noopener noreferrer" target="_blank">@cadusilva</a>
+        # <span> </span>
+        # <a href="https://bolha.one/@clima" class="u-url mention" rel="nofollow noopener noreferrer" target="_blank">@clima</a>
+        # <span> São Paulo</span></p>
 
-        # there must be a better way to de-HTML this string...
-        content = content.replace("<p>", "").replace("</p>", "")
-        content = content.replace("&apos;", "'")
-        msg = " ".join(
-            [
-                word.lower()
-                for word in content.split()
-                if set(word).isdisjoint(set('@<>"'))
-            ]
-        )
+        content = etree.XML(content).xpath("string()")
+
+        msg = " ".join((w for w in content.split() if not w.startswith("@")))
 
         if not msg:
             self.mastodon.status_post(f"what do you want?", in_reply_to_id=status)
